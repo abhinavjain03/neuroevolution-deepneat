@@ -1,0 +1,57 @@
+# NEAT configuration for the bit-sequence memory experiment.
+
+# The `NEAT` section specifies parameters particular to the NEAT algorithm
+# or the experiment itself.  This is the only required section.
+[NEAT]
+fitness_criterion     = max
+fitness_threshold     = 99.9
+pop_size              = 20
+reset_on_extinction   = 0
+
+[DefaultGenome]
+num_inputs              = 0
+num_hidden              = 2
+num_outputs             = 1
+compatibility_disjoint_coefficient = 1.0
+compatibility_weight_coefficient   = 0.8
+node_add_prob           = 0.3
+node_delete_prob        = 0.1
+num_of_nodes_default      = none
+num_of_nodes_options      = 512 1024 2048
+num_of_nodes_mutate_rate  = 0.1
+num_filters_conv_default      = none
+num_filters_conv_options      = 32 64 96
+num_filters_conv_mutate_rate  = 0.3
+kernel_size_conv_default      = none
+kernel_size_conv_options      = 3 4 5 6
+kernel_size_conv_mutate_rate  = 0.3
+stride_conv_default      = none
+stride_conv_options      = 1 2
+stride_conv_mutate_rate  = 0.3
+stride_pool_default      = none
+stride_pool_options      = 1 2
+stride_pool_mutate_rate  = 0.3
+poolsize_pool_default      = none
+poolsize_pool_options      = 2 3
+poolsize_pool_mutate_rate  = 0.3
+type_of_layer_default      = none
+type_of_layer_options      = dense conv2d
+type_of_layer_mutate_rate  = 0.2
+activation_default      = none
+activation_options      = sigmoid relu tanh
+activation_mutate_rate  = 0.3
+hax_maxpool_default = none
+hax_maxpool_options = true false
+has_maxpool_mutate_rate  = 0.2
+
+[DefaultSpeciesSet]
+compatibility_threshold = 6.0
+
+[DefaultStagnation]
+species_fitness_func = max
+max_stagnation  = 10
+
+[DefaultReproduction]
+elitism            = 2
+survival_threshold = 0.2
+
