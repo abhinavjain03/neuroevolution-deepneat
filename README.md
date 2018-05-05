@@ -1,1 +1,1 @@
-# neuroevolution-deepneat
+# NeuroEvolution using DeepNEAT
