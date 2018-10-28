@@ -1,2 +1,2 @@
 # NeuroEvolution using DeepNEAT
-![Not Loading](/img/1.PNG "Test")
+![Not Loading](/imgs/1.PNG "Test")
